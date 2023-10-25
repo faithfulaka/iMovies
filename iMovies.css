@@ -1,0 +1,182 @@
+*{
+   margin: 0;
+}
+body{
+      font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+     width: 100%;
+     height: 50px;
+     background-color:black;
+     position: fixed;
+     top: 0;
+}
+.top-bar-container{
+                    display:flex;
+                    justify-content: center;
+                    padding: 0 60px;
+                    height: 100%;
+                    color:#fff;
+}
+/* .logo-container{
+                 flex: 1;
+}
+.logo{
+       color: rgb(133, 255, 133);  
+} */
+.menu-container{
+                 flex: 6;
+}
+.menu-list{
+            list-style: none;  
+}
+.menu-list-item{
+                 margin-right: 30px;
+}
+.active{
+         font-weight: bold;
+         color:red
+}
+.profile-picture{
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.profile-container{       
+                    flex: 2;
+                    justify-content: flex-end;
+
+}
+.top-bar-container, .menu-list, .profile-container{
+                                                     display: flex;
+                                                     align-items: center;
+}
+.sidebar{
+          width: 50px; 
+          height: 100%;
+          background-color: black;
+          position: fixed;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 50px;
+}
+.side-menu-icon{
+                 color: white;
+                 font-size: 20px;
+                 margin-bottom: 50px;
+}
+/*Body Design and Navigation*/
+.body-container{
+                 overflow: hidden;
+                 background-color: #151515;
+                 color: white;
+                 height: (100vh);
+}
+.body-content{
+               margin: 0 50px;
+}
+.featured-content{
+                  background-image: linear-gradient(to bottom, rgba(58, 58, 58, 0.082), #151515), url('./img/f-1.jpg');
+                  height: 50vh;
+                  padding: 50px;
+}
+.featured-desc{
+                width: 500px;
+                color: lightgrey;
+                margin: 30px 0;               
+}
+.django{
+         width: 250px;
+         height: 120px;
+         margin: 30px;
+}
+button{
+        background-color: #4dbf00;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        text-transform: uppercase; 
+        cursor: pointer;
+        transition: all 0.1s ease-in
+
+}
+button:hover{
+              background-color: #68ff04f8;
+              
+}
+.movie-list-container{
+                       padding: 0 100px;
+}
+.movie-list-wrapper{  
+                      position: relative;
+                      overflow: hidden;
+}
+h1{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.movie-list{
+             display: flex;
+             align-items: center;
+             height: 300px;
+             transform: translateX(0);
+}
+.movie-list-item{
+                  margin-right: 30px;
+                  position: relative;
+}
+.movie-img{
+            width: 270px;
+            height: 200px;
+            border-radius: 20px;
+            transition: all 1s ease-in-out;
+            object-fit: cover;
+}
+.movie-list-item button{
+                         position: absolute;
+                         bottom: 20px;
+                         left: 50px; 
+                         opacity: 0;
+                         transition: all 0.1s ease-in
+}
+.movie-desc,
+.movie-list-item span{
+                       left: 50px;
+                       width: 230px;
+                       opacity: 0;
+                       transition: 1s all ease-in-out;
+}                                
+.movie-list-item span{
+                       background-color: #333;
+                       padding: 0 10px;
+                       font-size:32px;
+                       font-weight: bold;
+                       position: absolute;
+                       overflow: hidden;
+                       top: 10%;               
+}
+.movie-desc{
+             background-color: #333;
+             padding: 10px;
+             font-size: 14px;
+             position: absolute;
+             overflow: hidden;
+             top: 30%;
+}
+.movie-list-item:hover .movie-img{
+                                 
+                                   transform: scale(1.2);
+                                   margin: 0 30px;
+                                   opacity: 0.5;
+}
+.movie-list-item:hover span,
+.movie-list-item:hover .movie-desc,
+.movie-list-item:hover button{
+                                opacity: 1;
+}
